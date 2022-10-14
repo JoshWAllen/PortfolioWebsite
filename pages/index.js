@@ -4,7 +4,6 @@ import { BsFillMoonStarsFill, BsSunFill } from "react-icons/bs";
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import { FiExternalLink } from "react-icons/fi";
 import Image from "next/image";
-import Portrait from "../public/Portrait.jpg";
 import skills from "../data/skills";
 import projects from "../data/projects";
 
@@ -123,7 +122,7 @@ export default function Home() {
           <div className="relative w-72 h-72 mx-auto mt-20 mb-10 rounded-full overflow-hidden md:w-96 md:h-96">
             <Image
               alt="profile headshot picture of Josh Allen"
-              src={Portrait}
+              src="/Portrait"
             />
           </div>
         </section>
