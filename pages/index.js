@@ -122,7 +122,7 @@ export default function Home() {
           <div className="relative w-72 h-72 mx-auto mt-20 mb-10 rounded-full overflow-hidden md:w-96 md:h-96">
             <Image
               alt="profile headshot picture of Josh Allen"
-              src="/Portrait"
+              src="/Portrait.jpg"
             />
           </div>
         </section>
