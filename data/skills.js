@@ -4,6 +4,7 @@ const skills = [
   "Tailwind",
   "Javascript",
   "React",
+  "NextJS",
   "Node",
   "Python",
   "Flask",
