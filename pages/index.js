@@ -123,6 +123,7 @@ export default function Home() {
             <Image
               alt="profile headshot picture of Josh Allen"
               src="/Portrait.jpg"
+              priority={true}
             />
           </div>
         </section>
