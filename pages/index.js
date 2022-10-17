@@ -6,6 +6,7 @@ import { FiExternalLink } from "react-icons/fi";
 import Image from "next/image";
 import skills from "../data/skills";
 import projects from "../data/projects";
+import profilePic from "../public/Portrait.jpg";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -121,8 +122,8 @@ export default function Home() {
           </div>
           <div className="relative w-72 h-72 mx-auto mt-20 mb-10 rounded-full overflow-hidden md:w-96 md:h-96">
             <Image
+              src={profilePic}
               alt="profile headshot picture of Josh Allen"
-              src="/Portrait.jpg"
               priority={true}
             />
           </div>
