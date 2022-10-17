@@ -31,8 +31,9 @@ export default function Home() {
         ))}
         <a
           href={project.links.website}
-          target="blank"
+          target="_blank"
           className="flex justify-end"
+          rel="noopener noreferrer"
         >
           <FiExternalLink />
         </a>
@@ -83,7 +84,8 @@ export default function Home() {
                 <a
                   className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"
                   href="/Josh_Allen_Resume_10.13.2022.pdf"
-                  target="blank"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Resume
                 </a>
@@ -102,7 +104,8 @@ export default function Home() {
               <a
                 className="text-teal-600 underline dark:text-teal-400"
                 href="https://en.wikipedia.org/wiki/Josh_Allen_(quarterback)"
-                target="blank"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Buffalo Bills quarterback
               </a>
@@ -112,11 +115,16 @@ export default function Home() {
           <div className="text-5xl flex justify-center gap-16 py-3 text-gray-700 dark:text-gray-400">
             <a
               href="https://www.linkedin.com/in/joshua-wendong-allen/"
-              target="blank"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <AiFillLinkedin className="cursor-pointer hover:text-teal-600 dark:hover:text-teal-400" />
             </a>
-            <a href="https://github.com/JoshWAllen" target="blank">
+            <a
+              href="https://github.com/JoshWAllen"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <AiFillGithub className="cursor-pointer hover:text-teal-600 dark:hover:text-teal-400" />
             </a>
           </div>
