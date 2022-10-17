@@ -132,7 +132,8 @@ export default function Home() {
             <Image
               src={profilePic}
               alt="profile headshot picture of Josh Allen"
-              priority={true}
+              width="500"
+              height="500"
             />
           </div>
         </section>
