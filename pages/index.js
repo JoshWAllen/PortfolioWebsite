@@ -9,8 +9,9 @@ import projects from "../data/projects";
 import profilePic from "../public/Portrait.jpg";
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
+  //Mapping UI cards from /data/projects.js
   const projectCards = projects.map((project) => {
     return (
       <div
@@ -41,6 +42,7 @@ export default function Home() {
     );
   });
 
+  //Mapping UI cards from /data/skills.js
   const skillTags = skills.map((skill) => {
     return (
       <div
@@ -51,6 +53,27 @@ export default function Home() {
       </div>
     );
   });
+
+  // //Code for making darktheme abide by system preferences
+  // // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+  // if (
+  //   localStorage.theme === "dark" ||
+  //   (!("theme" in localStorage) &&
+  //     window.matchMedia("(prefers-color-scheme: dark)").matches)
+  // ) {
+  //   document.documentElement.classList.add("dark");
+  // } else {
+  //   document.documentElement.classList.remove("dark");
+  // }
+
+  // // Whenever the user explicitly chooses light mode
+  // localStorage.theme = "light";
+
+  // // Whenever the user explicitly chooses dark mode
+  // localStorage.theme = "dark";
+
+  // // Whenever the user explicitly chooses to respect the OS preference
+  // localStorage.removeItem("theme");
 
   return (
     <div className={darkMode ? "dark" : ""}>
@@ -63,7 +86,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="bg-white px-8 pb-4 font-poppins md:px-16 lg:px-32 dark:bg-slate-700 ">
-        <section id="Hero" className="min-h-screen">
+        <section id="hero" className="min-h-screen">
           <nav className=" py-10 mb-12 flex justify-between dark:text-white">
             <h1 className="text-xl">JA</h1>
             <ul className="flex items-center">
@@ -138,7 +161,7 @@ export default function Home() {
           </div>
         </section>
         {/* Content sections - skills projects etc */}
-        <section id="Projects">
+        <section id="projects">
           <div>
             <h3 className="text-3xl py-1 text-center dark:text-slate-100">
               Work | Projects | Clubs
@@ -155,7 +178,7 @@ export default function Home() {
             {projectCards}
           </div>
         </section>
-        <section id="Skills">
+        <section id="skills">
           <div className="text-center">
             <h3 className="text-3xl py-1 dark:text-slate-100">Skills</h3>
             <div className="max-w-lg m-auto flex gap-4 flex-wrap justify-center">
@@ -163,7 +186,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="text-center" id="contact">
+        <section id="contact" className="text-center">
           <div className="mt-10 flex flex-col items-center gap-3 dark:text-slate-300">
             <h2 className="text-3xl dark:text-slate-100">Contact</h2>
             <p>
